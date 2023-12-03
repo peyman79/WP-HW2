@@ -1,104 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Coffee Shop</title>
 
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link rel="stylesheet" href="css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
     <script src="scripts/main.js"></script>
-</head>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="row">
-            <a href="#" class="logo">
-                <img src="images/logo.jpg" alt="">
-            </a>
-            <h1>CozyCup Cafe</h1>
-        </div>
+      <div class="row">
+        <a href="#" class="logo">
+          <img src="images/logo.jpg" alt="" />
+        </a>
+        <h1>CozyCup Cafe</h1>
+      </div>
 
-        <nav class="navbar">
-            <a href="#home">Home</a>
-            <a href="#menu">Menu</a>
-            <a href="#gallery">Gallery</a>
-            <a href="#reservation">Reservation</a>
-            <a href="#about">About Us</a>
-        </nav>
+      <nav class="navbar">
+        <a href="#home">Home</a>
+        <a href="#menu">Menu</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#reservation">Reservation</a>
+        <a href="#about">About Us</a>
+      </nav>
     </header>
 
     <section class="home" id="home">
-        <div class="content">
-            <h3>Fresh coffee in the morning</h3>
-            <p>Welcome to CozyCup Cafe, where each cup tells a story and every moment feels like home. Our cozy space
-                blends modern elegance with rustic charm, creating the perfect backdrop for your coffee experience.
-                Whether you're seeking solitude or lively conversations, find your haven here. Join us in celebrating
-                the art of coffee and the joy of connection at CozyCup Cafe.</p>
-            <a href="#" class="btn">get yours now</a>
-        </div>
+      <div class="content">
+        <h3>Fresh coffee in the morning</h3>
+        <p>
+          Welcome to CozyCup Cafe, where each cup tells a story and every moment
+          feels like home. Our cozy space blends modern elegance with rustic
+          charm, creating the perfect backdrop for your coffee experience.
+          Whether you're seeking solitude or lively conversations, find your
+          haven here. Join us in celebrating the art of coffee and the joy of
+          connection at CozyCup Cafe.
+        </p>
+        <a href="#" class="btn">get yours now</a>
+      </div>
     </section>
 
     <section class="menu" id="menu">
-        <h1 class="heading">our <span>menu</span></h1>
+      <h1 class="heading">our <span>menu</span></h1>
 
-        <div class="box-container">
-            <div class="box">
-                <img src="" alt="">
-            </div>
-
+      <div class="box-container">
+        <div class="box">
+          <img src="" alt="" />
         </div>
+      </div>
 
-        <div class="category" id="categoryButtons">
-            <button class="category-button" onclick="showProducts('Drinks')">Drinks</button>
-            <button class="category-button" onclick="showProducts('Cakes')">Cakes</button>
-            <button class="category-button" onclick="showProducts('Shakes')">Shakes</button>
-        </div>
+      <div class="category" id="categoryButtons">
+        <button class="category-button" onclick="showProducts('Drinks')">
+          Drinks
+        </button>
+        <button class="category-button" onclick="showProducts('Cakes')">
+          Cakes
+        </button>
+        <button class="category-button" onclick="showProducts('Shakes')">
+          Shakes
+        </button>
+      </div>
 
+      <div class="product-list" id="productList">
         <div class="product-list" id="productList">
-            <div class="product-list" id="productList">
-                <div class="product-card"><img src="images/Latte.jpg" alt="Latte">
-                    <h3>Latte</h3>
-                    <p>$3.50</p><button class="order-button">Order</button>
-                </div>
-                <div class="product-card"><img src="images/Cappuccino.jpg" alt="Cappuccino">
-                    <h3>Cappuccino</h3>
-                    <p>$4.00</p><button class="order-button">Order</button>
-                </div>
-                <div class="product-card"><img src="images/Americano.jpg" alt="Americano">
-                    <h3>Americano</h3>
-                    <p>$3.00</p><button class="order-button">Order</button>
-                </div>
-                <div class="product-card"><img src="images/Espresso.jpg" alt="Espresso">
-                    <h3>Espresso</h3>
-                    <p>$2.50</p><button class="order-button">Order</button>
-                </div>
-            </div>
+          <div class="product-card">
+            <img src="images/Latte.jpg" alt="Latte" />
+            <h3>Latte</h3>
+            <p>$3.50</p>
+            <button class="order-button">Order</button>
+          </div>
+          <div class="product-card">
+            <img src="images/Cappuccino.jpg" alt="Cappuccino" />
+            <h3>Cappuccino</h3>
+            <p>$4.00</p>
+            <button class="order-button">Order</button>
+          </div>
+          <div class="product-card">
+            <img src="images/Americano.jpg" alt="Americano" />
+            <h3>Americano</h3>
+            <p>$3.00</p>
+            <button class="order-button">Order</button>
+          </div>
+          <div class="product-card">
+            <img src="images/Espresso.jpg" alt="Espresso" />
+            <h3>Espresso</h3>
+            <p>$2.50</p>
+            <button class="order-button">Order</button>
+          </div>
         </div>
+      </div>
 
-        <footer>
-            <p>&copy; 2023 Cafe Shop</p>
-        </footer>
+      <footer>
+        <p>&copy; 2023 Cafe Shop</p>
+      </footer>
     </section>
 
     <section class="about" id="about">
-        <h1 class="heading"> <span>about</span> us </h1>
-        <div class="row">
-            <div class="image">
-                <img src="images/about-img.jpg" alt="">
-            </div>
-            <div class="content">
-                <h3>What makes our coffee special?</h3>
-                <p>Welcome to CozyCup Cafe, where passion for exceptional coffee meets a vibrant community. Our
-                    carefully sourced beans create a unique flavor journey in every cup. Join us for a warm and inviting
-                    experience, celebrating the heart of CozyCup Cafe, where coffee and community come together.</p>
-                <a href="#" class="btn">Learn More</a>
-            </div>
+      <h1 class="heading"><span>about</span> us</h1>
+      <div class="row">
+        <div class="image">
+          <img src="images/about-img.jpg" alt="" />
         </div>
+        <div class="content">
+          <h3>What makes our coffee special?</h3>
+          <p>
+            Welcome to CozyCup Cafe, where passion for exceptional coffee meets
+            a vibrant community. Our carefully sourced beans create a unique
+            flavor journey in every cup. Join us for a warm and inviting
+            experience, celebrating the heart of CozyCup Cafe, where coffee and
+            community come together.
+          </p>
+          <a href="#" class="btn">Learn More</a>
+        </div>
+      </div>
     </section>
-</body>
 
+    <section class="gallery" id="gallery">
+      <h1 class="heading"><span>Gallery</span></h1>
+      <div class="flex-container">
+        <div class="imgbox">
+          <img
+            src="images/gallery-1.webp"
+            alt="CozyCup Cafe"
+            class="center-fit"
+          />
+        </div>
+        <div class="imgbox">
+          <img
+            src="images/gallery-2.webp"
+            alt="CozyCup Cafe"
+            class="center-fit"
+          />
+        </div>
+        <div class="imgbox">
+          <img
+            src="images/gallery-3.webp"
+            alt="CozyCup Cafe"
+            class="center-fit"
+          />
+        </div>
+        <div class="imgbox">
+          <img
+            src="images/gallery-4.webp"
+            alt="CozyCup Cafe"
+            class="center-fit"
+          />
+        </div>
+      </div>
+    </section>
+  </body>
 </html>
