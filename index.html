@@ -1,159 +1,267 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Coffee Shop</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Coffee Shop</title>
 
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
-    />
-    <link rel="stylesheet" href="css/style.css" />
-    <script src="scripts/main.js"></script>
-  </head>
+  <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+  />
+  <link rel="stylesheet" href="css/style.css" />
+  <script src="scripts/main.js"></script>
+</head>
 
-  <body>
-    <header class="header">
-      <div class="row">
-        <a href="#" class="logo">
-          <img src="images/logo.jpg" alt="" />
-        </a>
-        <h1>CozyCup Cafe</h1>
+<body>
+<header class="header">
+  <div class="row">
+    <a href="#" class="logo">
+      <img src="images/logo.jpg" alt="" />
+    </a>
+    <h1>CozyCup Cafe</h1>
+  </div>
+
+  <nav class="navbar">
+    <a href="#home">Home</a>
+    <a href="#menu">Menu</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#reservation">Reservation</a>
+    <a href="#about">About Us</a>
+  </nav>
+</header>
+
+<section class="home" id="home">
+  <div class="content">
+    <h3>Fresh coffee in the morning</h3>
+    <p>
+      Welcome to CozyCup Cafe, where each cup tells a story and every moment
+      feels like home. Our cozy space blends modern elegance with rustic
+      charm, creating the perfect backdrop for your coffee experience.
+      Whether you're seeking solitude or lively conversations, find your
+      haven here. Join us in celebrating the art of coffee and the joy of
+      connection at CozyCup Cafe.
+    </p>
+    <a href="#" class="btn">get yours now</a>
+  </div>
+</section>
+
+<section class="menu" id="menu">
+  <h1 class="heading">our <span>menu</span></h1>
+
+  <div class="box-container">
+    <div class="box">
+      <img src="" alt="" />
+    </div>
+  </div>
+
+  <div class="category" id="categoryButtons">
+    <button class="category-button" onclick="showProducts('Drinks')">
+      Drinks
+    </button>
+    <button class="category-button" onclick="showProducts('Cakes')">
+      Cakes
+    </button>
+    <button class="category-button" onclick="showProducts('Shakes')">
+      Shakes
+    </button>
+  </div>
+
+  <div class="product-list" id="productList">
+    <div class="product-list" id="productList">
+      <div class="product-card">
+        <img src="images/Latte.jpg" alt="Latte" />
+        <h3>Latte</h3>
+        <p>$3.50</p>
+        <button class="order-button">Order</button>
+      </div>
+      <div class="product-card">
+        <img src="images/Cappuccino.jpg" alt="Cappuccino" />
+        <h3>Cappuccino</h3>
+        <p>$4.00</p>
+        <button class="order-button">Order</button>
+      </div>
+      <div class="product-card">
+        <img src="images/Americano.jpg" alt="Americano" />
+        <h3>Americano</h3>
+        <p>$3.00</p>
+        <button class="order-button">Order</button>
+      </div>
+      <div class="product-card">
+        <img src="images/Espresso.jpg" alt="Espresso" />
+        <h3>Espresso</h3>
+        <p>$2.50</p>
+        <button class="order-button">Order</button>
+      </div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2023 Cafe Shop</p>
+  </footer>
+</section>
+
+<section class="gallery" id="gallery">
+  <h1 class="heading"><span>Gallery</span></h1>
+  <div class="flex-container">
+    <div class="imgbox">
+      <img
+              src="images/gallery-1.webp"
+              alt="CozyCup Cafe"
+              class="center-fit"
+      />
+    </div>
+    <div class="imgbox">
+      <img
+              src="images/gallery-2.webp"
+              alt="CozyCup Cafe"
+              class="center-fit"
+      />
+    </div>
+    <div class="imgbox">
+      <img
+              src="images/gallery-3.webp"
+              alt="CozyCup Cafe"
+              class="center-fit"
+      />
+    </div>
+    <div class="imgbox">
+      <img
+              src="images/gallery-4.webp"
+              alt="CozyCup Cafe"
+              class="center-fit"
+      />
+    </div>
+  </div>
+</section>
+
+<section class="reservation" id="reservation">
+  <h1 class="heading"><span>Reservation</span></h1>
+
+  <!-- Reservation Form -->
+  <div class="reservation-form">
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+
+    <label for="email">Email:</label>
+    <input type="email" id="email" name="email" required>
+
+    <label for="number">Numbers:</label>
+    <input type="number" id="number" name="number" min="1" value="1" required>
+
+    <label for="date">Reservation Date:</label>
+    <input type="date" id="date" name="date" required>
+
+    <label for="time">Reservation Time:</label>
+    <input type="time" id="time" name="time" required>
+  </div>
+
+  <!-- Order Form (Additional elements to show/hide) -->
+  <div class="center-checkbox">
+    <input type="checkbox" id="showOrderFormToggle" class="center-btn" style="display: none;">
+    <label for="showOrderFormToggle" class="btn order-btn">Show Order Form</label>
+
+    <div class="order-form additional-elements">
+      <div>
+        <img src="images/Latte.jpg" alt="Latte" />
+        <label for="latte">Latte:</label>
+        <input type="number" id="latte" name="latte" value="0" min="0">
       </div>
 
-      <nav class="navbar">
-        <a href="#home">Home</a>
-        <a href="#menu">Menu</a>
-        <a href="#gallery">Gallery</a>
-        <a href="#reservation">Reservation</a>
-        <a href="#about">About Us</a>
-      </nav>
-    </header>
-
-    <section class="home" id="home">
-      <div class="content">
-        <h3>Fresh coffee in the morning</h3>
-        <p>
-          Welcome to CozyCup Cafe, where each cup tells a story and every moment
-          feels like home. Our cozy space blends modern elegance with rustic
-          charm, creating the perfect backdrop for your coffee experience.
-          Whether you're seeking solitude or lively conversations, find your
-          haven here. Join us in celebrating the art of coffee and the joy of
-          connection at CozyCup Cafe.
-        </p>
-        <a href="#" class="btn">get yours now</a>
-      </div>
-    </section>
-
-    <section class="menu" id="menu">
-      <h1 class="heading">our <span>menu</span></h1>
-
-      <div class="box-container">
-        <div class="box">
-          <img src="" alt="" />
-        </div>
+      <div>
+        <img src="images/Cappuccino.jpg" alt="Cappuccino" />
+        <label for="cappuccino">Cappuccino:</label>
+        <input type="number" id="cappuccino" name="cappuccino" value="0" min="0">
       </div>
 
-      <div class="category" id="categoryButtons">
-        <button class="category-button" onclick="showProducts('Drinks')">
-          Drinks
-        </button>
-        <button class="category-button" onclick="showProducts('Cakes')">
-          Cakes
-        </button>
-        <button class="category-button" onclick="showProducts('Shakes')">
-          Shakes
-        </button>
+      <div>
+        <img src="images/Americano.jpg" alt="Cappuccino" />
+        <label for="Americano">Americano:</label>
+        <input type="number" id="Americano" name="Americano" value="0" min="0">
       </div>
 
-      <div class="product-list" id="productList">
-        <div class="product-list" id="productList">
-          <div class="product-card">
-            <img src="images/Latte.jpg" alt="Latte" />
-            <h3>Latte</h3>
-            <p>$3.50</p>
-            <button class="order-button">Order</button>
-          </div>
-          <div class="product-card">
-            <img src="images/Cappuccino.jpg" alt="Cappuccino" />
-            <h3>Cappuccino</h3>
-            <p>$4.00</p>
-            <button class="order-button">Order</button>
-          </div>
-          <div class="product-card">
-            <img src="images/Americano.jpg" alt="Americano" />
-            <h3>Americano</h3>
-            <p>$3.00</p>
-            <button class="order-button">Order</button>
-          </div>
-          <div class="product-card">
-            <img src="images/Espresso.jpg" alt="Espresso" />
-            <h3>Espresso</h3>
-            <p>$2.50</p>
-            <button class="order-button">Order</button>
-          </div>
-        </div>
+      <div>
+        <img src="images/Espresso.jpg" alt="Cappuccino" />
+        <label for="Espresso">Espresso:</label>
+        <input type="number" id="Espresso" name="Espresso" value="0" min="0">
       </div>
 
-      <footer>
-        <p>&copy; 2023 Cafe Shop</p>
-      </footer>
-    </section>
-
-    <section class="gallery" id="gallery">
-      <h1 class="heading"><span>Gallery</span></h1>
-      <div class="flex-container">
-        <div class="imgbox">
-          <img
-            src="images/gallery-1.webp"
-            alt="CozyCup Cafe"
-            class="center-fit"
-          />
-        </div>
-        <div class="imgbox">
-          <img
-            src="images/gallery-2.webp"
-            alt="CozyCup Cafe"
-            class="center-fit"
-          />
-        </div>
-        <div class="imgbox">
-          <img
-            src="images/gallery-3.webp"
-            alt="CozyCup Cafe"
-            class="center-fit"
-          />
-        </div>
-        <div class="imgbox">
-          <img
-            src="images/gallery-4.webp"
-            alt="CozyCup Cafe"
-            class="center-fit"
-          />
-        </div>
+      <div>
+        <img src="images/Chocolate-Cake.jpg" alt="Cappuccino" />
+        <label for="Chocolate Cake">Chocolate Cake:</label>
+        <input type="number" id="Chocolate Cake" name="Chocolate Cake" value="0" min="0">
       </div>
-    </section>
 
-    <section class="about" id="about">
-      <h1 class="heading"><span>about</span> us</h1>
-      <div class="row">
-        <div class="image">
-          <img src="images/about-img.jpg" alt="" />
-        </div>
-        <div class="content">
-          <h3>What makes our coffee special?</h3>
-          <p>
-            Welcome to CozyCup Cafe, where passion for exceptional coffee meets
-            a vibrant community. Our carefully sourced beans create a unique
-            flavor journey in every cup. Join us for a warm and inviting
-            experience, celebrating the heart of CozyCup Cafe, where coffee and
-            community come together.
-          </p>
-          <a href="#" class="btn">Learn More</a>
-        </div>
+      <div>
+        <img src="images/Red Velvet Cake.jpg" alt="Cappuccino" />
+        <label for="Red Velvet Cake">Red Velvet Cake:</label>
+        <input type="number" id="Red Velvet Cake" name="Red Velvet Cake" value="0" min="0">
       </div>
-    </section>
-  </body>
+
+      <div>
+        <img src="images/Cheesecake.jpg" alt="Cheesecake" />
+        <label for="Cheesecake">Cheesecake:</label>
+        <input type="number" id="Cheesecake" name="Cheesecake" value="0" min="0">
+      </div>
+
+      <div>
+        <img src="images/Carrot Cake.jpg" alt="Carrot Cake" />
+        <label for="Carrot Cake">Carrot Cake:</label>
+        <input type="number" id="Carrot Cake" name="Carrot Cake" value="0" min="0">
+      </div>
+
+      <div>
+        <img src="images/Strawberry Shake.jpg" alt="Strawberry Shake" />
+        <label for="Strawberry Shake">Strawberry Shake:</label>
+        <input type="number" id="Strawberry Shake" name="Strawberry Shake" value="0" min="0">
+      </div>
+
+      <div>
+        <img src="images/Chocolate Shake.jpg" alt="Chocolate Shake" />
+        <label for="Chocolate Shake">Chocolate Shake:</label>
+        <input type="number" id="Chocolate Shake" name="Chocolate Shake" value="0" min="0">
+      </div>
+
+      <div>
+        <img src="images/Vanilla Shake.jpg" alt="Vanilla Shake" />
+        <label for="Vanilla Shake">Vanilla Shake:</label>
+        <input type="number" id="Vanilla Shake" name="Vanilla Shake" value="0" min="0">
+      </div>
+
+      <div>
+        <img src="images/Mango Tango Shake.jpg" alt="Mango Tango Shake" />
+        <label for="Mango Tango Shake">Mango Tango Shake:</label>
+        <input type="number" id="Mango Tango Shake" name="Mango Tango Shake" value="0" min="0">
+      </div>
+    </div>
+
+
+    <!-- Add more options as needed -->
+  </div>
+  <!-- Additional elements related to reservation go here -->
+
+  <button class="btn center-btn">Make Reservation</button>
+</section>
+
+<section class="about" id="about">
+  <h1 class="heading"><span>about</span> us</h1>
+  <div class="row">
+    <div class="image">
+      <img src="images/about-img.jpg" alt="" />
+    </div>
+    <div class="content">
+      <h3>What makes our coffee special?</h3>
+      <p>
+        Welcome to CozyCup Cafe, where passion for exceptional coffee meets
+        a vibrant community. Our carefully sourced beans create a unique
+        flavor journey in every cup. Join us for a warm and inviting
+        experience, celebrating the heart of CozyCup Cafe, where coffee and
+        community come together.
+      </p>
+      <a href="#" class="btn">Learn More</a>
+    </div>
+  </div>
+</section>
+</body>
 </html>

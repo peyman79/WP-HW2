@@ -291,3 +291,117 @@ section {
   max-width: 100%;
   max-height: 100vh;
 }
+
+
+.reservation {
+  background: var(--black);
+  color: #fff;
+  padding: 2rem 7%;
+}
+
+.reservation .heading {
+  text-align: center;
+  color: #fff;
+  text-transform: uppercase;
+  padding-bottom: 3.5rem;
+  font-size: 4rem;
+}
+
+.reservation-form {
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.reservation-form label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: var(--main-color);
+}
+
+.reservation-form input {
+  width: 100%;
+  padding: 0.7rem;
+  font-size: 1.6rem;
+  margin-top: 0.5rem;
+  background-color: bisque;
+}
+
+.reservation-form button {
+  margin-top: 1.5rem;
+  background-color: var(--main-color);
+}
+
+.additional-elements {
+  margin-top: 10px;
+}
+
+.center-btn {
+  display: block;
+  background-color: var(--main-color);
+  margin: 20px auto;
+  padding-left: 20px;
+}
+
+.center-checkbox {
+  text-align: center;
+}
+
+.center-checkbox input[type="checkbox"] {
+  display: inline-block;
+}
+
+.center-checkbox label {
+  display: inline-block;
+  margin-left: 5px; /* Adjust the margin as needed for spacing between the checkbox and label */
+}
+
+.order-form {
+  display: none;
+  margin: 20px;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  margin-top: 20px;
+  background-color: var(--main-color);
+  padding: 20px;
+  border-radius: 8px;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  /* Additional styling for the hidden order form */
+}
+
+.order-form label {
+  display: block;
+  margin-top: 1rem;
+  font-size: 2rem;
+  color: var(--bg);
+}
+
+.order-form input[type="number"] {
+  width: 50px;
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.order-form img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.order-form div {
+  margin-bottom: 30px;
+  border: 1.5px solid #010103;
+  margin: 7px;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+#showOrderFormToggle:checked + .btn + .order-form {
+  display: grid;
+  /* Additional styling for the visible order form */
+}
+/* ... (remaining CSS code) ... */
