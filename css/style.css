@@ -65,7 +65,9 @@ body {
 }
 
 .btn:hover {
-  letter-spacing: 0.2rem;
+  background: #fff;
+  color: var(--main-color);
+
 }
 
 section {
@@ -229,6 +231,11 @@ section {
   margin-bottom: 10px;
   align-self: center;
   font-size: 2rem;
+}
+.category-button:hover {
+  background: #fff;
+  color: var(--main-color);
+
 }
 
 .product-list {
